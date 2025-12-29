@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreeFire Bio Creator - Vercel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-fire"></i> FreeFire Bio Creator</h1>
+            <p>Hosted on Vercel | Powered by Flexbase</p>
+        </div>
+        
+        <div class="main-content">
+            <div class="input-section">
+                <h2><i class="fas fa-edit"></i> Bio Settings</h2>
+                
+                <div class="form-group">
+                    <label for="bioText"><i class="fas fa-font"></i> Bio Text</label>
+                    <textarea id="bioText" maxlength="500">FreeFire Player | Pro Gamer | Add me for battles! 🎮🔥</textarea>
+                    <div class="bio-counter" id="bioCounter">0/500</div>
+                </div>
+                
+                <h2><i class="fas fa-sign-in-alt"></i> Login Method</h2>
+                
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="jwt">JWT Token</button>
+                    <button class="tab-btn" data-tab="uid">UID & Password</button>
+                    <button class="tab-btn" data-tab="access">Access Token</button>
+                </div>
+                
+                <div class="tab-content active" id="jwt-tab">
+                    <div class="form-group">
+                        <input type="text" id="jwtToken" placeholder="Enter JWT token">
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="uid-tab">
+                    <div class="form-group">
+                        <input type="text" id="uid" placeholder="Enter UID">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="password" placeholder="Enter Password">
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="access-tab">
+                    <div class="form-group">
+                        <input type="text" id="accessToken" placeholder="Enter Access Token">
+                    </div>
+                </div>
+                
+                <button class="submit-btn" id="submitBtn">
+                    <i class="fas fa-paper-plane"></i> UPDATE BIO
+                </button>
+                
+                <div class="info-box">
+                    <h3><i class="fas fa-info-circle"></i> Note</h3>
+                    <p>This is a simplified Vercel version. For full features with protobuf support, use the local Flask version.</p>
+                </div>
+            </div>
+            
+            <div class="output-section">
+                <h2><i class="fas fa-server"></i> API Response</h2>
+                <button class="clear-btn" id="clearBtn">
+                    <i class="fas fa-trash"></i> Clear
+                </button>
+                
+                <div class="result-container" id="resultContainer">
+                    <div class="loading" id="loading">
+                        <div class="spinner"></div>
+                        <p>Processing...</p>
+                    </div>
+                    <div id="results">
+                        <div class="result-item">
+                            <div class="result-label">Ready</div>
+                            <div class="result-value">Enter credentials and click UPDATE BIO</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="api-url">
+                    <strong>API Endpoint:</strong> <span id="apiUrl">Loading...</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Telegram: @Flexbasei | Vercel Hosted Version</p>
+            <p class="warning"><i class="fas fa-exclamation-triangle"></i> Use at your own risk</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
