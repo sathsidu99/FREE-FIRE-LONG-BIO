@@ -1,0 +1,8 @@
+{
+  "name": "freefire-bio-vercel",
+  "version": "1.0.0",
+  "description": "FreeFire Bio Updater hosted on Vercel",
+  "scripts": {
+    "dev": "python -m http.server 8000"
+  }
+}
